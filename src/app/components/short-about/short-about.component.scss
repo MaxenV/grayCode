@@ -1,0 +1,21 @@
+div {
+    background-color: var(--ocean-green);
+    color: white;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+h3 {
+    margin: 0;
+}
+
+p {
+    margin: 10px 0;
+    width: 80%;
+    text-align: center;
+}
