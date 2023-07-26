@@ -1,0 +1,21 @@
+.mainNav {
+    display: flex;
+}
+
+.navItem {
+    background-color: var(--ocean-green);
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 82px;
+    height: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 12px;
+}
