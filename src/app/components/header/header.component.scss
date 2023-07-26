@@ -1,0 +1,22 @@
+.mainHeader {
+    background-color: #D9D9D9;
+    height: 56px;
+    position: relative;
+}
+
+h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+    font-size: 20px;
+}
+
+.navigation {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-right: 10px;
+}
