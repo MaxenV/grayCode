@@ -1,16 +1,30 @@
+app-header {
+    height: 56px;
+    width: 100%;
+    background-color: var(--main-grey);
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
 app-short-about {
     display: flex;
     justify-content: center;
     width: 100%;
+    margin-top: 56px;
 }
 
-
+app-grey-code-main {
+    margin-bottom: 56px;
+    display: block;
+}
 
 app-footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 50%;
     transform: translateX(-50%);
     width: 99%;
     background-color: var(--main-grey);
+    height: 56px;
 }
