@@ -1,11 +1,11 @@
-<form>
+<form [formGroup]="controlsSettings">
     <div class="form-group">
         <label form="animationSpeed">
             Animation speed (in miliseconds)
         </label>
         <input
             type="text"
-            formArrayName="animationSpeed"
+            formControlName="animationSpeed"
         >
     </div>
     <div class="form-group">
@@ -14,7 +14,7 @@
         </label>
         <input
             type="text"
-            formArrayName="destinyNumber"
+            formControlName="destinyNumber"
         >
     </div>
     <div class="form-group">
@@ -23,7 +23,7 @@
         </label>
         <input
             type="text"
-            formArrayName="startNumber"
+            formControlName="startNumber"
         >
     </div>
     <button type="submit">Start Countion</button>

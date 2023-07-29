@@ -9,6 +9,7 @@ import { ShortAboutComponent } from './components/short-about/short-about.compon
 import { GreyCodeMainComponent } from './components/grey-code-main/grey-code-main.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { GreyControlsComponent } from './components/grey-code-main/grey-controls/grey-controls.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -19,10 +20,12 @@ import { GreyControlsComponent } from './components/grey-code-main/grey-controls
     GreyCodeMainComponent,
     FooterComponent,
     GreyControlsComponent,
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
