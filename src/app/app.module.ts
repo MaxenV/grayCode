@@ -8,6 +8,7 @@ import { NavigationComponent } from './components/header/navigation/navigation.c
 import { ShortAboutComponent } from './components/short-about/short-about.component';
 import { GreyCodeMainComponent } from './components/grey-code-main/grey-code-main.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { GreyControlsComponent } from './components/grey-code-main/grey-controls/grey-controls.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FooterComponent } from './components/footer/footer.component';
     NavigationComponent,
     ShortAboutComponent,
     GreyCodeMainComponent,
-    FooterComponent
+    FooterComponent,
+    GreyControlsComponent,
   ],
   imports: [
     BrowserModule,
