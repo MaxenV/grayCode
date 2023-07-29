@@ -10,6 +10,7 @@ import { GreyCodeMainComponent } from './components/grey-code-main/grey-code-mai
 import { FooterComponent } from './components/footer/footer.component';
 import { GreyControlsComponent } from './components/grey-code-main/grey-controls/grey-controls.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { GreyTableComponent } from './components/grey-code-main/grey-table/grey-table.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ReactiveFormsModule } from '@angular/forms';
     GreyCodeMainComponent,
     FooterComponent,
     GreyControlsComponent,
+    GreyTableComponent,
 
   ],
   imports: [
