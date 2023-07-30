@@ -6,11 +6,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
 import { ShortAboutComponent } from './components/short-about/short-about.component';
-import { GreyCodeMainComponent } from './components/grey-code-main/grey-code-main.component';
+import { GreyCodeCounterComponent } from './components/grey-code-counter/grey-code-counter.component';
 import { FooterComponent } from './components/footer/footer.component';
-import { GreyControlsComponent } from './components/grey-code-main/grey-controls/grey-controls.component';
+import { GreyControlsComponent } from './components/grey-code-counter/grey-controls/grey-controls.component';
 import { ReactiveFormsModule } from '@angular/forms';
-import { GreyTableComponent } from './components/grey-code-main/grey-table/grey-table.component';
+import { GreyTableComponent } from './components/grey-code-counter/grey-table/grey-table.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +18,7 @@ import { GreyTableComponent } from './components/grey-code-main/grey-table/grey-
     HeaderComponent,
     NavigationComponent,
     ShortAboutComponent,
-    GreyCodeMainComponent,
+    GreyCodeCounterComponent,
     FooterComponent,
     GreyControlsComponent,
     GreyTableComponent,

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GreyCodeMainComponent } from './grey-code-main.component';
+import { GreyCodeMainComponent } from './grey-code-counter.component';
 
 describe('GreyCodeMainComponent', () => {
   let component: GreyCodeMainComponent;
