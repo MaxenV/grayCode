@@ -1,10 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GreyCodeCounterService } from '../grey-code-counter.service';
 
 @Component({
   selector: 'app-grey-table',
   templateUrl: './grey-table.component.html',
   styleUrls: ['./grey-table.component.scss']
 })
-export class GreyTableComponent {
-  greyBits = ["1", "0", "0", "1", "1", "0", "1"]
+export class GreyTableComponent implements OnInit {
+  constructor(private counterService: GreyCodeCounterService) { }
+  greyBits: String[] = []
+
+  ngOnInit(): void {
+    this.counterService.greyBits.subscribe((newBits) => {
+      this.greyBits = newBits
+    })
+  }
 }

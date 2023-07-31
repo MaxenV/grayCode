@@ -1,4 +1,7 @@
-<form [formGroup]="controlsSettings">
+<form
+    [formGroup]="controlsSettings"
+    (ngSubmit)="onSubmit()"
+>
     <div class="form-group">
         <label form="animationSpeed">
             Animation speed (in miliseconds)
