@@ -8,7 +8,7 @@ import { GreyCodeCounterService } from '../grey-code-counter.service';
 })
 export class GreyTableComponent implements OnInit {
   constructor(private counterService: GreyCodeCounterService) { }
-  greyBits: String[] = []
+  greyBits: number[] = []
 
   ngOnInit(): void {
     this.counterService.greyBits.subscribe((newBits) => {

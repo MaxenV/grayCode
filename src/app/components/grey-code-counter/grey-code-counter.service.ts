@@ -5,7 +5,7 @@ import { Subject, interval } from 'rxjs';
   providedIn: 'root'
 })
 export class GreyCodeCounterService {
-  greyBits = new Subject<String[]>()
+  greyBits = new Subject<number[]>()
   private _actualValue: number = 0
   destinyValue: number = 0
 
@@ -17,24 +17,17 @@ export class GreyCodeCounterService {
     return this._actualValue
   }
 
-
-  decimalToGray(decimal: number): string[] {
+  decimalToGray(decimal: number): number[] {
     let binaryString = decimal.toString(2);
-    let grayString = '';
+    let grayString = [];
 
-    grayString += binaryString[0];
-
-    for (let i = 1; i < binaryString.length; i++) {
-      grayString += (parseInt(binaryString[i]) ^
-        parseInt(binaryString[i - 1])).toString();
+    for (let i = 0; i < binaryString.length; i++) {
+      grayString.push(parseInt(binaryString[i]) ^ parseInt(binaryString[i - 1]))
     }
-
-    return grayString.split("");
+    return grayString;
   }
 
   countGreyBits(destiny: number, start: number, delay: number) {
-    console.log(`${destiny}, ${start}, ${delay}`);
-
     let counter = start;
     const inverval = setInterval(() => {
       this.value = counter
