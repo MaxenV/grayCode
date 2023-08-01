@@ -1,16 +1,24 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GreyCodeMainComponent } from './grey-code-counter.component';
+import { GreyCodeCounterComponent } from './grey-code-counter.component';
+import { GreyTableComponent } from './grey-table/grey-table.component';
+import { GreyControlsComponent } from './grey-controls/grey-controls.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
-describe('GreyCodeMainComponent', () => {
-  let component: GreyCodeMainComponent;
-  let fixture: ComponentFixture<GreyCodeMainComponent>;
+describe('GreyCodeCounterComponent', () => {
+  let component: GreyCodeCounterComponent;
+  let fixture: ComponentFixture<GreyCodeCounterComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GreyCodeMainComponent]
+      declarations: [
+        GreyCodeCounterComponent,
+        GreyControlsComponent,
+        GreyTableComponent
+      ],
+      imports: [ReactiveFormsModule]
     });
-    fixture = TestBed.createComponent(GreyCodeMainComponent);
+    fixture = TestBed.createComponent(GreyCodeCounterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

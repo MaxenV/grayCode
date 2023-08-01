@@ -1,5 +1,8 @@
 <table>
     <tr>
-        <td *ngFor="let bit of greyBits">{{bit}}</td>
+        <td
+            *ngFor="let bit of greyBits; let i = index"
+            [ngClass]="{'changingBit':i == actualCangeBit}"
+        >{{bit}}</td>
     </tr>
 </table>

@@ -1,5 +1,6 @@
 table {
     border-collapse: collapse;
+    direction: rtl;
 
     td {
         border: 2px solid black;
@@ -11,10 +12,18 @@ table {
     }
 
     td:last-child {
-        border-right: 2px solid black;
+        border-left: 2px solid black;
     }
 
     td:first-child {
-        border-left: 2px solid black;
+        border-right: 2px solid black;
     }
+
+    td.changingBit {
+        background-color: var(--ocean-green);
+        color: white;
+    }
+
+
+
 }

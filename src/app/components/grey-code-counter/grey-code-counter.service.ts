@@ -5,13 +5,21 @@ import { Subject, interval } from 'rxjs';
   providedIn: 'root'
 })
 export class GreyCodeCounterService {
-  greyBits = new Subject<number[]>()
-  private _actualValue: number = 0
-  destinyValue: number = 0
+  greyBits = new Subject<{
+    bitList: number[],
+    lastChangedBit: number
+  }>()
+  private _actualValue = 0
+  destinyValue = 0
 
   set value(v: number) {
     this._actualValue = v
-    this.greyBits.next(this.decimalToGray(v))
+    this.greyBits.next({
+      bitList: this.decimalToGray(v),
+      // lastChangedBit: 0
+      lastChangedBit: this.wchichBitChange(v)
+    })
+
   }
   get actualValue() {
     return this._actualValue
@@ -36,6 +44,16 @@ export class GreyCodeCounterService {
         clearInterval(inverval)
     }, delay)
   }
+
+  wchichBitChange(value: number) {
+    if (value == 0) return 0
+    let power = 1;
+    while (!(value % Math.round(Math.pow(2, power)))) {
+      ++power
+    }
+    return power - 1
+  }
+
 
   constructor() { }
 }

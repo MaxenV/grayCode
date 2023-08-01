@@ -9,10 +9,14 @@ import { GreyCodeCounterService } from '../grey-code-counter.service';
 export class GreyTableComponent implements OnInit {
   constructor(private counterService: GreyCodeCounterService) { }
   greyBits: number[] = []
+  actualCangeBit = 0
 
   ngOnInit(): void {
     this.counterService.greyBits.subscribe((newBits) => {
-      this.greyBits = newBits
+      this.greyBits = newBits.bitList.reverse()
+      this.actualCangeBit = newBits.lastChangedBit
+      console.log(newBits.bitList);
+
     })
   }
 }
