@@ -16,7 +16,6 @@ export class GreyCodeCounterService {
     this._actualValue = v
     this.greyBits.next({
       bitList: this.decimalToGray(v),
-      // lastChangedBit: 0
       lastChangedBit: this.wchichBitChange(v)
     })
 
@@ -26,6 +25,13 @@ export class GreyCodeCounterService {
   }
 
   decimalToGray(decimal: number): number[] {
+    if (decimal < 0)
+      throw new Error("Cannot write a negative number in gray code")
+
+
+    if (decimal == 0)
+      return [0]
+
     let binaryString = decimal.toString(2);
     let grayString = [];
 
@@ -45,7 +51,10 @@ export class GreyCodeCounterService {
     }, delay)
   }
 
-  wchichBitChange(value: number) {
+  wchichBitChange(value: number): number {
+    if (value < 0)
+      throw new Error("Cannot write a negative number in gray code")
+
     if (value == 0) return 0
     let power = 1;
     while (!(value % Math.round(Math.pow(2, power)))) {

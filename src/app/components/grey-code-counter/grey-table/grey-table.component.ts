@@ -15,7 +15,6 @@ export class GreyTableComponent implements OnInit {
     this.counterService.greyBits.subscribe((newBits) => {
       this.greyBits = newBits.bitList.reverse()
       this.actualCangeBit = newBits.lastChangedBit
-      console.log(newBits.bitList);
 
     })
   }
