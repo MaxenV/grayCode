@@ -22,17 +22,24 @@ export class GrayTableComponent implements OnInit {
     })
   }
 
-
   countGrayBits(destiny: number, start: number, delay: number) {
     let counter = start;
     const interval = setInterval(() => {
 
-      this.grayBits = this.counterService.decimalToGray(counter).reverse()
+      this.grayBits = this.correctLengthBitsTable(counter)
       this.actualChangeBit = this.counterService.whichBitChange(counter)
 
       counter++;
       if (counter > destiny)
         clearInterval(interval)
     }, delay)
+  }
+
+  correctLengthBitsTable(actualValue: number) {
+    let localBinaryArray = this.counterService.decimalToGray(actualValue).reverse()
+    return localBinaryArray.concat(
+      Array(this.finalBitListLength - localBinaryArray.length)
+        .fill(0)
+    )
   }
 }
