@@ -1,22 +1,22 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GreyControlsComponent } from './grey-controls.component';
+import { GrayControlsComponent } from './gray-controls.component';
 import { ReactiveFormsModule } from '@angular/forms';
 
-describe('GreyControlsComponent', () => {
-  let component: GreyControlsComponent;
-  let fixture: ComponentFixture<GreyControlsComponent>;
+describe('GrayControlsComponent', () => {
+  let component: GrayControlsComponent;
+  let fixture: ComponentFixture<GrayControlsComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
         ReactiveFormsModule
       ],
-      declarations: [GreyControlsComponent]
+      declarations: [GrayControlsComponent]
     }).compileComponents();
 
 
-    fixture = TestBed.createComponent(GreyControlsComponent);
+    fixture = TestBed.createComponent(GrayControlsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

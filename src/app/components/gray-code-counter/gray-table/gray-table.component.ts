@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { GreyCodeCounterService } from '../grey-code-counter.service';
+import { GrayCodeCounterService } from '../gray-code-counter.service';
 
 @Component({
-  selector: 'app-grey-table',
-  templateUrl: './grey-table.component.html',
-  styleUrls: ['./grey-table.component.scss']
+  selector: 'app-gray-table',
+  templateUrl: './gray-table.component.html',
+  styleUrls: ['./gray-table.component.scss']
 })
-export class GreyTableComponent implements OnInit {
-  constructor(private counterService: GreyCodeCounterService) { }
-  greyBits: number[] = []
+export class GrayTableComponent implements OnInit {
+  constructor(private counterService: GrayCodeCounterService) { }
+  grayBits: number[] = []
   actualChangeBit = 0
   finalBitListLength = 1
 
@@ -27,7 +27,7 @@ export class GreyTableComponent implements OnInit {
     let counter = start;
     const interval = setInterval(() => {
 
-      this.greyBits = this.counterService.decimalToGray(counter).reverse()
+      this.grayBits = this.counterService.decimalToGray(counter).reverse()
       this.actualChangeBit = this.counterService.whichBitChange(counter)
 
       counter++;

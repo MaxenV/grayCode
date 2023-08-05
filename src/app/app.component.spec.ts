@@ -2,12 +2,12 @@ import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
-import { GreyCodeCounterComponent } from './components/grey-code-counter/grey-code-counter.component';
+import { GrayCodeCounterComponent } from './components/gray-code-counter/gray-code-counter.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { ShortAboutComponent } from './components/short-about/short-about.component';
 import { NavigationComponent } from './components/header/navigation/navigation.component';
-import { GreyControlsComponent } from './components/grey-code-counter/grey-controls/grey-controls.component';
-import { GreyTableComponent } from './components/grey-code-counter/grey-table/grey-table.component';
+import { GrayControlsComponent } from './components/gray-code-counter/gray-controls/gray-controls.component';
+import { GrayTableComponent } from './components/gray-code-counter/gray-table/gray-table.component';
 
 describe('AppComponent', () => {
   beforeEach(() => TestBed.configureTestingModule({
@@ -17,10 +17,10 @@ describe('AppComponent', () => {
       HeaderComponent,
       NavigationComponent,
       ShortAboutComponent,
-      GreyCodeCounterComponent,
+      GrayCodeCounterComponent,
       FooterComponent,
-      GreyControlsComponent,
-      GreyTableComponent
+      GrayControlsComponent,
+      GrayTableComponent
     ]
   }));
 

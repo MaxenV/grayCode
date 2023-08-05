@@ -1,49 +1,16 @@
-// module.exports = function (config: any) {
-//     config.set({
-//         basePath: '',
-//         frameworks: ['jasmine', '@angular-devkit/build-angular'],
-//         plugins: [
-//             require('karma-jasmine'),
-//             require('karma-firefox-launcher'), // Dodajemy tylko plugin dla Firefox
-//             require('karma-coverage-istanbul-reporter'),
-//             require('@angular-devkit/build-angular/plugins/karma')
-//         ],
-//         client: {
-//             clearContext: false
-//         },
-//         coverageIstanbulReporter: {
-//             dir: require('path').join(__dirname, './coverage/[projekt]'),
-//             reports: ['html', 'lcovonly', 'text-summary'],
-//             fixWebpackSourcePaths: true
-//         },
-//         reporters: ['progress', 'kjhtml'],
-//         port: 9876,
-//         colors: true,
-//         logLevel: config.LOG_INFO,
-//         autoWatch: true,
-//         browsers: ['Firefox'], // Ustawiamy tylko przeglądarkę Firefox
-//         singleRun: false,
-//         restartOnFileChange: true
-//     });
-// };
-
-
-// Karma configuration file, see link for more information
-// https://karma-runner.github.io/1.0/config/configuration-file.html
-
 module.exports = function (config: any) {
     config.set({
         basePath: '',
         frameworks: ['jasmine', '@angular-devkit/build-angular'],
         plugins: [
             require('karma-jasmine'),
-            require('karma-firefox-launcher'), // Dodajemy tylko plugin dla Firefox
+            require('karma-firefox-launcher'),
             require('karma-jasmine-html-reporter'),
             require('karma-coverage-istanbul-reporter'),
             require('@angular-devkit/build-angular/plugins/karma')
         ],
         client: {
-            clearContext: false // leave Jasmine Spec Runner output visible in browser
+            clearContext: false
         },
         coverageIstanbulReporter: {
             dir: require('path').join(__dirname, '../coverage'),

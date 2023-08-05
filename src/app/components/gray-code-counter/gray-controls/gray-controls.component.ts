@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormControl, FormGroup } from '@angular/forms';
-import { GreyCodeCounterService } from '../grey-code-counter.service';
+import { GrayCodeCounterService } from '../gray-code-counter.service';
 
 @Component({
-  selector: 'app-grey-controls',
-  templateUrl: './grey-controls.component.html',
-  styleUrls: ['./grey-controls.component.scss']
+  selector: 'app-gray-controls',
+  templateUrl: './gray-controls.component.html',
+  styleUrls: ['./gray-controls.component.scss']
 })
-export class GreyControlsComponent {
+export class GrayControlsComponent {
 
   controlsSettings: FormGroup = new FormGroup({
     'animationSpeed': new FormControl(1000),
@@ -15,7 +15,7 @@ export class GreyControlsComponent {
     'startNumber': new FormControl(0)
   });
 
-  constructor(private counterService: GreyCodeCounterService) { }
+  constructor(private counterService: GrayCodeCounterService) { }
 
   onSubmit() {
 

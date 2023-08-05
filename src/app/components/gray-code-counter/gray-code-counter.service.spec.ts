@@ -1,14 +1,14 @@
 import { TestBed } from '@angular/core/testing';
 
-import { GreyCodeCounterService } from './grey-code-counter.service';
+import { GrayCodeCounterService } from './gray-code-counter.service';
 import { count } from 'rxjs';
 
-describe('GreyCodeCounterService', () => {
-  let service: GreyCodeCounterService;
+describe('GrayCodeCounterService', () => {
+  let service: GrayCodeCounterService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(GreyCodeCounterService);
+    service = TestBed.inject(GrayCodeCounterService);
   });
 
   it('should be created', () => {

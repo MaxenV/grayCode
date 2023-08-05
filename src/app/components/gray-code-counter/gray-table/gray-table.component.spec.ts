@@ -1,16 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { GreyTableComponent } from './grey-table.component';
+import { GrayTableComponent } from './gray-table.component';
 
-describe('GreyTableComponent', () => {
-  let component: GreyTableComponent;
-  let fixture: ComponentFixture<GreyTableComponent>;
+describe('GrayTableComponent', () => {
+  let component: GrayTableComponent;
+  let fixture: ComponentFixture<GrayTableComponent>;
 
   beforeEach(() => {
     TestBed.configureTestingModule({
-      declarations: [GreyTableComponent]
+      declarations: [GrayTableComponent]
     });
-    fixture = TestBed.createComponent(GreyTableComponent);
+    fixture = TestBed.createComponent(GrayTableComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

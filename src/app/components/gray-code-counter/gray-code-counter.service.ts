@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { CounterControls } from './grey-controls/counter-controls.model';
+import { CounterControls } from './gray-controls/counter-controls.model';
 
 @Injectable({
   providedIn: 'root'
 })
-export class GreyCodeCounterService {
+export class GrayCodeCounterService {
   controls = new Subject<CounterControls>()
 
   decimalToGray(decimal: number): number[] {
