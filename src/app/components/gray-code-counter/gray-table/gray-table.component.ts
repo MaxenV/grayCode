@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GrayCodeCounterService } from '../gray-code-counter.service';
 import { CounterControls } from '../gray-controls/counter-controls.model';
+import { interval } from 'rxjs';
 
 @Component({
   selector: 'app-gray-table',
@@ -25,30 +26,29 @@ export class GrayTableComponent implements OnInit {
 
   countDownBits(controls: CounterControls) {
     this.finalBitListLength = controls.destinyValue.toString(2).length
-    let counter = controls.startValue;
-    const interval = setInterval(() => {
 
+    let myInterval = interval(controls.animationSpeed).subscribe(iterator => {
+      const counter = controls.startValue - iterator
       this.grayBits = this.correctLengthBitsTable(counter)
       this.actualChangeBit = this.counterService.whichBitChange(counter + 1)
 
-      counter--;
-      if (counter < controls.destinyValue)
-        clearInterval(interval)
-    }, controls.animationSpeed)
+      if (counter <= controls.destinyValue)
+        myInterval.unsubscribe()
+    })
   }
 
   countUpBits(controls: CounterControls) {
     this.finalBitListLength = controls.destinyValue.toString(2).length
-    let counter = controls.startValue;
-    const interval = setInterval(() => {
 
+    let myInterval = interval(controls.animationSpeed).subscribe(iterator => {
+      const counter = iterator + controls.startValue
       this.grayBits = this.correctLengthBitsTable(counter)
       this.actualChangeBit = this.counterService.whichBitChange(counter)
 
-      counter++;
-      if (counter > controls.destinyValue)
-        clearInterval(interval)
-    }, controls.animationSpeed)
+      if (counter >= controls.destinyValue)
+        myInterval.unsubscribe()
+    })
+
   }
 
   correctLengthBitsTable(actualValue: number) {
