@@ -10,7 +10,7 @@ import { GrayCodeCounterService } from '../gray-code-counter.service';
 export class GrayControlsComponent {
 
   controlsSettings: FormGroup = new FormGroup({
-    'animationSpeed': new FormControl(-1000, this.correctNumberValidator),
+    'animationSpeed': new FormControl(1000, this.correctNumberValidator),
     'destinyNumber': new FormControl(10, this.correctNumberValidator),
     'startNumber': new FormControl(0, this.correctNumberValidator)
   });
@@ -25,12 +25,15 @@ export class GrayControlsComponent {
       animationSpeed: Number(this.controlsSettings.get('animationSpeed')?.value)
     }
     )
+
   }
 
   correctNumberValidator(control: AbstractControl): ValidationErrors | null {
     if (control.value === '') return { required: true }
     if (+control.value < 0) return { negativeNumber: true }
+    if (Number.isNaN(Number(control.value))) return { NaNError: true }
     if ((+control.value) % 1 !== 0) return { floatingNumber: true }
+
     return null;
   }
 }

@@ -10,6 +10,12 @@
             type="text"
             formControlName="animationSpeed"
         >
+        <p
+            *ngIf="controlsSettings.get('animationSpeed')?.invalid && controlsSettings.get('animationSpeed')?.touched"
+            class="errorInfo"
+        >
+            {{controlsSettings.get('animationSpeed')?.errors | controlsError}}
+        </p>
     </div>
     <div class="form-group">
         <label form="destinyNumber">
@@ -19,6 +25,12 @@
             type="text"
             formControlName="destinyNumber"
         >
+        <p
+            *ngIf="controlsSettings.get('destinyNumber')?.invalid && controlsSettings.get('destinyNumber')?.touched"
+            class="errorInfo"
+        >
+            {{controlsSettings.get('destinyNumber')?.errors | controlsError}}
+        </p>
     </div>
     <div class="form-group">
         <label form="startNumber">
@@ -28,6 +40,15 @@
             type="text"
             formControlName="startNumber"
         >
+        <p
+            *ngIf="controlsSettings.get('startNumber')?.invalid && controlsSettings.get('startNumber')?.touched"
+            class="errorInfo"
+        >
+            {{controlsSettings.get('startNumber')?.errors | controlsError}}
+        </p>
     </div>
-    <button type="submit">Start Counting</button>
+    <button
+        type="submit"
+        [disabled]="controlsSettings.invalid"
+    >Start Counting</button>
 </form>

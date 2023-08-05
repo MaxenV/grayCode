@@ -18,13 +18,26 @@ form {
             height: 35px;
             padding: 10px;
         }
+
+        .errorInfo {
+            color: red;
+        }
     }
 
     button {
         height: 80%;
         color: white;
         background-color: var(--ocean-green);
+        border-radius: 5px;
+
     }
+
+    button:disabled {
+        background-color: #d7d7d7;
+        color: black;
+        cursor: not-allowed;
+    }
+
 }
 
 @media (max-width:1300px) {

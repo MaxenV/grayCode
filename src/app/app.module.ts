@@ -11,6 +11,7 @@ import { FooterComponent } from './components/footer/footer.component';
 import { GrayControlsComponent } from './components/gray-code-counter/gray-controls/gray-controls.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GrayTableComponent } from './components/gray-code-counter/gray-table/gray-table.component';
+import { ControlsErrorPipe } from './components/gray-code-counter/gray-controls/controls-error.pipe';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { GrayTableComponent } from './components/gray-code-counter/gray-table/gr
     FooterComponent,
     GrayControlsComponent,
     GrayTableComponent,
+    ControlsErrorPipe,
 
   ],
   imports: [
