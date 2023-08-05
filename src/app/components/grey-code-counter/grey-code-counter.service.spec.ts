@@ -34,18 +34,18 @@ describe('GreyCodeCounterService', () => {
     });
   })
 
-  describe('Test wchichBitChange()', () => {
+  describe('Test whichBitChange()', () => {
     it('block negative numbers', () => {
-      expect(service.wchichBitChange(3)).toThrowError;
+      expect(service.whichBitChange(3)).toThrowError;
     });
     it('0 number', () => {
-      expect(service.wchichBitChange(0)).toEqual(0);
+      expect(service.whichBitChange(0)).toEqual(0);
     });
     it('Test number 9', () => {
-      expect(service.wchichBitChange(10)).toEqual(1);
+      expect(service.whichBitChange(10)).toEqual(1);
     });
     it('Test number 112', () => {
-      expect(service.wchichBitChange(112)).toEqual(4);
+      expect(service.whichBitChange(112)).toEqual(4);
     });
   })
 

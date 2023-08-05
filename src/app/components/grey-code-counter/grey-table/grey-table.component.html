@@ -2,7 +2,7 @@
     <tr>
         <td
             *ngFor="let bit of greyBits; let i = index"
-            [ngClass]="{'changingBit':i == actualCangeBit}"
+            [ngClass]="{'changingBit':i == actualChangeBit}"
         >{{bit}}</td>
     </tr>
 </table>

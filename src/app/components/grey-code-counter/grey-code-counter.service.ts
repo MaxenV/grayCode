@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Subject, interval } from 'rxjs';
+import { Subject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -10,16 +10,17 @@ export class GreyCodeCounterService {
     lastChangedBit: number
   }>()
   private _actualValue = 0
-  destinyValue = 0
+  destinyValue = new Subject<number>()
 
   set value(v: number) {
     this._actualValue = v
     this.greyBits.next({
       bitList: this.decimalToGray(v),
-      lastChangedBit: this.wchichBitChange(v)
+      lastChangedBit: this.whichBitChange(v)
     })
 
   }
+
   get actualValue() {
     return this._actualValue
   }
@@ -42,16 +43,17 @@ export class GreyCodeCounterService {
   }
 
   countGreyBits(destiny: number, start: number, delay: number) {
+    this.destinyValue.next(destiny)
     let counter = start;
-    const inverval = setInterval(() => {
+    const interval = setInterval(() => {
       this.value = counter
       counter++;
       if (counter > destiny)
-        clearInterval(inverval)
+        clearInterval(interval)
     }, delay)
   }
 
-  wchichBitChange(value: number): number {
+  whichBitChange(value: number): number {
     if (value < 0)
       throw new Error("Cannot write a negative number in gray code")
 

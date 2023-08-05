@@ -10,7 +10,6 @@ describe('GreyControlsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [
-        // ... ReactiveFormsModule importy ...
         ReactiveFormsModule
       ],
       declarations: [GreyControlsComponent]

@@ -15,11 +15,11 @@ export class GreyControlsComponent {
     'startNumber': new FormControl(0)
   });
 
-  constructor(private couterService: GreyCodeCounterService) { }
+  constructor(private counterService: GreyCodeCounterService) { }
 
   onSubmit() {
 
-    this.couterService.countGreyBits(
+    this.counterService.countGreyBits(
       Number(this.controlsSettings.get('destinyNumber')?.value),
       Number(this.controlsSettings.get('startNumber')?.value),
       Number(this.controlsSettings.get('animationSpeed')?.value)
