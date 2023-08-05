@@ -7,6 +7,7 @@ import { CounterControls } from './gray-controls/counter-controls.model';
 })
 export class GrayCodeCounterService {
   controls = new Subject<CounterControls>()
+  countingNow = new Subject<boolean>()
 
   decimalToGray(decimal: number): number[] {
     if (decimal < 0)

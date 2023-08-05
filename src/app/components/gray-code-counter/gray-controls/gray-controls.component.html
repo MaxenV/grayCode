@@ -49,6 +49,6 @@
     </div>
     <button
         type="submit"
-        [disabled]="controlsSettings.invalid"
+        [disabled]="controlsSettings.invalid || this.blockSubmit"
     >Start Counting</button>
 </form>
