@@ -19,10 +19,11 @@ export class GreyControlsComponent {
 
   onSubmit() {
 
-    this.counterService.countGreyBits(
-      Number(this.controlsSettings.get('destinyNumber')?.value),
-      Number(this.controlsSettings.get('startNumber')?.value),
-      Number(this.controlsSettings.get('animationSpeed')?.value)
+    this.counterService.controls.next({
+      destinyValue: Number(this.controlsSettings.get('destinyNumber')?.value),
+      startValue: Number(this.controlsSettings.get('startNumber')?.value),
+      animationSpeed: Number(this.controlsSettings.get('animationSpeed')?.value)
+    }
     )
   }
 

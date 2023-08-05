@@ -13,14 +13,26 @@ export class GreyTableComponent implements OnInit {
   finalBitListLength = 1
 
   ngOnInit(): void {
-    this.counterService.greyBits.subscribe((newBits) => {
-      let localBinaryList: number[] = newBits.bitList
-      this.actualChangeBit = newBits.lastChangedBit
-
-      this.greyBits = Array(this.finalBitListLength - localBinaryList.length).fill(0)
-        .concat(localBinaryList.reverse())
+    this.counterService.controls.subscribe(controls => {
+      this.finalBitListLength = controls.destinyValue.toString(2).length
+      this.countGrayBits(
+        controls.destinyValue,
+        controls.startValue,
+        controls.animationSpeed)
     })
+  }
 
-    this.counterService.destinyValue.subscribe((value) => this.finalBitListLength = value.toString(2).length)
+
+  countGrayBits(destiny: number, start: number, delay: number) {
+    let counter = start;
+    const interval = setInterval(() => {
+
+      this.greyBits = this.counterService.decimalToGray(counter).reverse()
+      this.actualChangeBit = this.counterService.whichBitChange(counter)
+
+      counter++;
+      if (counter > destiny)
+        clearInterval(interval)
+    }, delay)
   }
 }
