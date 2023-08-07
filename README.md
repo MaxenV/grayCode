@@ -1,27 +1,25 @@
-# GrayCode
+# Gray Code Counter with Angular
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.3.
+This project is a simple website created for learning the basics of the Angular framework. The website presents a counter that displays consecutive numbers in Gray code within a specified range. Users have the ability to set the initial and final numbers as well as the interval at which these numbers change automatically.
 
-## Development server
+## Features
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Choose Initial and Final Numbers: Users can define the range of numbers that will be displayed by the counter.
+- Set Change Interval: Users can adjust the speed at which numbers change by modifying the time between consecutive updates.
+- Display in Gray Code: Each number is represented in Gray code, adding an educational aspect to the project.
+- Learning Angular: The project was primarily created to learn the fundamentals of the Angular framework.
 
-## Code scaffolding
+## Technologies and Tools
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- Angular
+- HTML/SCSS
+- TypeScript
+- GitHub
 
-## Build
+## Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+1. Clone this project to your local machine.
+2. Ensure you have Angular CLI installed.
+3. In the terminal, navigate to the project directory and run `npm install` to install dependencies.
+4. Run `ng serve` to start the local development server.
+5. Open your browser and go to `http://localhost:4200/` to see the live site.
