@@ -1,7 +1,7 @@
 app-header {
     height: 56px;
     width: 100%;
-    background-color: var(--main-gray);
+    background-color: var(--main-grey);
     position: fixed;
     top: 0;
     left: 0;
@@ -14,9 +14,9 @@ app-short-about {
     margin-top: 56px;
 }
 
-app-gray-code-main {
+app-gray-code-counter {
     margin-top: 40px;
-    margin-bottom: 56px;
+    margin-bottom: 70px;
     display: block;
 }
 
@@ -26,6 +26,6 @@ app-footer {
     left: 50%;
     transform: translateX(-50%);
     width: 99%;
-    background-color: var(--main-gray);
+    background-color: var(--main-grey);
     height: 56px;
 }
