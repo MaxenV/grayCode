@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./gray-code-counter.component.scss']
 })
 export class GrayCodeCounterComponent {
+  showInstruction = false;
 
+  onShowInstruction() {
+    this.showInstruction = true
+  }
+  onHideInstruction() {
+    this.showInstruction = false
+  }
 }

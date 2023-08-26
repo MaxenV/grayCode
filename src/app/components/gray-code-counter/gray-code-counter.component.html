@@ -1,2 +1,14 @@
 <app-gray-table></app-gray-table>
+
 <app-gray-controls></app-gray-controls>
+<button
+    class="btn-instructions"
+    type="button"
+    (click)="onShowInstruction()"
+>
+    ?
+</button>
+<app-instruction
+    *ngIf="showInstruction"
+    (hide)="onHideInstruction()"
+></app-instruction>

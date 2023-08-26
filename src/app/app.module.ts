@@ -12,6 +12,7 @@ import { GrayControlsComponent } from './components/gray-code-counter/gray-contr
 import { ReactiveFormsModule } from '@angular/forms';
 import { GrayTableComponent } from './components/gray-code-counter/gray-table/gray-table.component';
 import { ControlsErrorPipe } from './components/gray-code-counter/gray-controls/controls-error.pipe';
+import { InstructionComponent } from './components/instruction/instruction.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { ControlsErrorPipe } from './components/gray-code-counter/gray-controls/
     GrayControlsComponent,
     GrayTableComponent,
     ControlsErrorPipe,
+    InstructionComponent,
 
   ],
   imports: [
