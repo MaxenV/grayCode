@@ -1,3 +1,5 @@
+![image](https://github.com/MaxenV/grayCode/assets/64496589/cc8f85e3-5840-40ed-8059-c517ec901719)
+
 # Gray Code Counter with Angular
 
 This project is a simple website created for learning the basics of the Angular framework. The website presents a counter that displays consecutive numbers in Gray code within a specified range. Users have the ability to set the initial and final numbers as well as the interval at which these numbers change automatically.
